@@ -1,0 +1,66 @@
+\documentclass[12pt,a4paper]{moderncv}
+\moderncvtheme[blue]{classic} % classic, casual, empty
+
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{dirtytalk}
+\usepackage{amsmath}
+\usepackage{relsize}
+\usepackage[scale=0.80]{geometry}
+\usepackage[symbol]{footmisc}
+
+\usepackage[%
+  backend=biber,
+  %defernumbers=true,
+  %style=authoryear-comp,
+  style=numeric,
+  maxbibnames=99,
+  defernumbers=true,
+  sorting=ydnt, % Sort by year (descending), name, title
+  %sorting=none, % Do not sort at all. Entries are processed in citation order.
+]{biblatex}
+
+\addbibresource{publications.bib}
+
+
+\firstname{Florian}
+\lastname{Geißer}
+\title{Dr. rer. nat. in Computer Science}
+
+\begin{document}
+
+\setlength{\parskip}{4em}
+% Adjust spacing
+%\setlength{\bibspacing}{\baselineskip}
+
+\maketitle
+
+\nocite{geisser-phd2019}
+
+\printbibliography[title={{Ph.D. Thesis}}, type=thesis]
+
+\nocite{*}
+
+\printbibliography[title={Publications in Conference Proceedings},
+                   keyword=conference]
+
+\printbibliography[title={Publications in Workshop Proceedings},
+                   keyword=workshop]
+
+\newpage
+
+\printbibliography[title={Extended Abstracts},keyword=abstract]
+
+\printbibliography[title={Planner Abstracts},keyword=planner]
+
+\printbibliography[title={Technical Reports},type=TechReport]
+
+\section{Errata}
+
+\begin{itemize}
+\item In \cite{keller-geisser-aaai2015}:
+On page 7, we mention that the results at IPPC would have differed by $-0.09$,
+$+0.04$ and $+0.05$, which should read $-0.009$, $+0.004$ and $+0.005$ instead.
+\end{itemize}
+
+\end{document}
