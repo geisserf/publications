@@ -9,6 +9,7 @@
 \usepackage[scale=0.80]{geometry}
 \usepackage[symbol]{footmisc}
 
+
 \usepackage[%
   backend=biber,
   %defernumbers=true,
@@ -26,6 +27,9 @@
 \firstname{Florian}
 \lastname{Geißer}
 \title{Dr. rer. nat. in Computer Science}
+
+% print paper titles in bold
+\DeclareFieldFormat*{title}{\textbf{#1}}
 
 \begin{document}
 
@@ -46,8 +50,6 @@
 
 \printbibliography[title={Publications in Workshop Proceedings},
                    keyword=workshop]
-
-\newpage
 
 \printbibliography[title={Extended Abstracts.},keyword=abstract]
 
